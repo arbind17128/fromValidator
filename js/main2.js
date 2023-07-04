@@ -28,6 +28,13 @@ function checkEmail(input) {
         errorMessege(input,"Email is not valid")
     }
 }
+function clearField() {
+    username.value ='';
+    email.value ='';
+    password.value ='';    
+    address.value ='';
+
+}
 function chechPasswordMatch(input,input1) {
     if(input.value=== input1.value){
        showSucess(input1)
@@ -105,6 +112,7 @@ console.log(item.confirm)
 collectionItem.push(item)
 localStorage.setItem("collectionItem",JSON.stringify(collectionItem));
 // console.log(collectionItem[0].username.target);
+    clearField() 
 }
 
 
